@@ -1,0 +1,5 @@
+<% if model.errors.any? %>
+  <div>
+    <p class="text-red-500 text-xs"><%= model.errors[field].join(', ') %></p>
+  </div>
+<% end %>

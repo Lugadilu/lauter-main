@@ -1,0 +1,28 @@
+<section>
+    <div class="default-container">
+        <div class="grid gap-6">
+            <div class="grid gap-2">
+                <h1 class="text-2xl font-bold"><%= @project.title %></h1>
+            </div>
+            
+            <div class="grid gap-2">
+                <p class="font-bold">Project Excerpt</p>
+                <%= @project.excerpt %>
+            </div>
+            <div class="grid gap-2">
+                <p class="font-bold">Project description</p>
+                <div class="prose prose-a:text-secondary">
+                    <%= @project.description.html_safe %>
+                </div>
+            </div>
+            <div class="grid gap-2">
+                <p class="font-bold">Published</p>
+                <span class="rounded-full px-2 <%= @project.published ? 'text-primary' : 'text-secondary' %>%>"><%= @project.published ?  '&check;'.html_safe : '&times;'.html_safe %></span>
+            </div>
+            <div class="grid gap-2">
+                <div><%= link_to 'Edit Project',  edit_dashboard_project_path(@project), class: "btn-secondary w-auto"%></div>
+                <div><%= link_to 'All Projects',  dashboard_projects_path, class: "btn-primary w-auto"%></div>
+            </div>
+        </div>
+    </div>
+</section>

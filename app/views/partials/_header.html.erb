@@ -1,0 +1,27 @@
+<header>
+ <div class="default-container py-4"> 
+    <div class="flex justify-between items-center">
+        <nav>
+            <div>
+            <%= image_tag 'lauter1.jpg', class: 'h-10 w-10 xl:h-12 w-12 rounded' %>
+        </div>
+        <div>
+            <b>Lauter Enterprises Limited</b>
+        </div>
+        </nav>
+        <div class="xl:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+        <nav class="hidden xl:block">
+            <ul class="flex xl:space-x-8">
+                <li><%= link_to 'Home', home_path, class: "nav-link" %> </li>
+                <li><%= link_to 'About Us', home_path, class: "nav-link" %> </li>
+                <li><%= link_to 'Projects', dashboard_projects_path, class: "nav-link" %> </li>
+            </ul>
+        </nav>
+    </div>
+ </div>
+
+</header>

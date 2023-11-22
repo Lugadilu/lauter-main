@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Activate Smooth scroll
+**/
+html {
+  scroll-behavior: smooth;
+}
+
+/**
+ * Deactivate when users prefer motion reduction
+**/
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+
+  .nav-link {
+    @apply hover:text-secondary font-bold transition ease-in duration-200;
+  }
+
+  .default-container {
+    @apply max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-5 sm:px-0;
+  }
+
+  .section-container {
+    @apply default-container py-16 xl:py-32
+  }
+
+  .btn {
+    @apply cursor-pointer px-8 py-2 rounded w-full text-sm transition ease-in duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary hover:bg-secondary text-white;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary hover:bg-secondary/80 text-white;
+  }
+
+}
+@import 'actiontext.css';
